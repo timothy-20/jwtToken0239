@@ -16,6 +16,7 @@
 		99EC356C26007C3F007044FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EC356B26007C3F007044FC /* main.m */; };
 		99EC357626007C40007044FC /* jwtToken0239Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EC357526007C40007044FC /* jwtToken0239Tests.m */; };
 		99EC358126007C40007044FC /* jwtToken0239UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EC358026007C40007044FC /* jwtToken0239UITests.m */; };
+		99EC359126007E29007044FC /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EC359026007E29007044FC /* Token.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		99EC357C26007C40007044FC /* jwtToken0239UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jwtToken0239UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EC358026007C40007044FC /* jwtToken0239UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jwtToken0239UITests.m; sourceTree = "<group>"; };
 		99EC358226007C40007044FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99EC358F26007E29007044FC /* Token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Token.h; sourceTree = "<group>"; };
+		99EC359026007E29007044FC /* Token.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Token.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		99EC355826007C39007044FC /* jwtToken0239 */ = {
 			isa = PBXGroup;
 			children = (
+				99EC358E26007E09007044FC /* Token */,
 				99EC355926007C39007044FC /* AppDelegate.h */,
 				99EC355A26007C39007044FC /* AppDelegate.m */,
 				99EC355C26007C39007044FC /* SceneDelegate.h */,
@@ -135,6 +139,15 @@
 				99EC358226007C40007044FC /* Info.plist */,
 			);
 			path = jwtToken0239UITests;
+			sourceTree = "<group>";
+		};
+		99EC358E26007E09007044FC /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				99EC358F26007E29007044FC /* Token.h */,
+				99EC359026007E29007044FC /* Token.m */,
+			);
+			path = Token;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99EC356126007C39007044FC /* ViewController.m in Sources */,
+				99EC359126007E29007044FC /* Token.m in Sources */,
 				99EC355B26007C39007044FC /* AppDelegate.m in Sources */,
 				99EC356C26007C3F007044FC /* main.m in Sources */,
 				99EC355E26007C39007044FC /* SceneDelegate.m in Sources */,
