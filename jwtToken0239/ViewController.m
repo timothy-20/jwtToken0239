@@ -17,6 +17,7 @@
     [super viewDidLoad];
     
     [self run];
+    [self run2];
 }
 
 -(NSString *)parseFromURLRequest:(NSURLRequest *)request
@@ -44,6 +45,41 @@
     
     NSLog(@"%@", params);
     NSLog(@"done");
+}
+
+-(NSMutableArray *)jsonDic
+{
+    NSMutableArray *arrJSON = [[NSMutableArray alloc] init];
+    
+    for (int i = 1; i < 3; i++) {
+        NSMutableDictionary *dicJSON = [[NSMutableDictionary alloc] init];
+        dicJSON[@"name"] = @"DEAN";
+        dicJSON[@"age"] = @(28+i);
+        dicJSON[@"gender"] = @"male";
+        
+        [arrJSON addObject:dicJSON];
+    }
+    
+    return arrJSON;
+}
+
+-(void)run2
+{
+    NSData *dtJSON = [NSJSONSerialization dataWithJSONObject:[self jsonDic] options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *strJSON = [[NSString alloc] initWithData:dtJSON encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", strJSON);
+    
+    NSError *err = nil;
+    NSArray *arrJSON = [NSJSONSerialization JSONObjectWithData:dtJSON options:kNilOptions error:&err];
+//     특별한 경우를 제외하곤 kNilOptions를 사용해도 전혀 무방함.
+//     - NSJSONReadingMutableContainers, - NSJSONReadingMutableLeaves, - NSJSONReadingAllowFragMents 등의 옵션이 있음.
+    
+    NSLog(@"array 형태로 추출");
+    NSLog(@"%@", arrJSON);
+    
+    if(err) {
+        NSLog(@"error");
+    }
 }
 
 @end
